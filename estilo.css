@@ -56,8 +56,9 @@ nav.menu {
 
 .menu-esquerda li a span.material-symbols-outlined {
   font-size: var(--icon-size);
-  margin-right: 8px;
+  margin-right: 0;
 }
+
 
 .menu-direita {
   display: flex;
