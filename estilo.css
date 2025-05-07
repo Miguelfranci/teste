@@ -165,38 +165,42 @@ button[name="tipo"][value="saida"]:hover {
 
 /* Responsividade */
 @media (max-width: 600px) {
-  :root {
-    --container-width: 100%;
-    --container-padding: 15px;
-    --font-size-title: 1.8em;
-    --font-size-button: 0.95em;
-    --menu-font-size: 0.9em;
-    --icon-size: 20px;
-  }
-
   nav.menu {
     flex-direction: column;
-    padding: 10px;
+    align-items: flex-start;
+    padding: 10px 15px;
     gap: 10px;
   }
 
   .menu-esquerda {
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .menu-esquerda li a {
+    font-size: 1em;
+    padding: 5px 0;
   }
 
   .menu-direita {
-    flex-direction: column;
-    gap: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .gestao {
-    padding: var(--container-padding);
+  .menu-direita .btn-conta {
+    flex-grow: 1;
+    margin-left: 10px;
   }
 
-  button {
-    font-size: var(--font-size-button);
-    padding: 8px;
+  :root {
+    --container-width: 100%;
+    --container-padding: 15px;
+    --font-size-title: 1.3em;
+    --font-size-button: 0.95em;
+    --menu-font-size: 1em;
+    --icon-size: 22px;
   }
 }
