@@ -1,0 +1,202 @@
+@import url('cores.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.corpo {
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--cor-fundo-menu, #83C724);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+}
+
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.menu-esquerda {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-esquerda li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--cor-font-menu, #1e1e1e);
+  font-size: var(--menu-font-size);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-esquerda li a:hover {
+  color: #fff;
+}
+
+.menu-esquerda li a span.material-symbols-outlined {
+  font-size: var(--icon-size);
+  margin-right: 8px;
+}
+
+.menu-direita {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-direita .nome {
+  color: var(--cor-font-menu, #1e1e1e);
+  font-size: var(--menu-font-size);
+  font-weight: 500;
+}
+
+.menu-direita .btn-conta {
+  background-color: var(--cor-botao-login, #358F21);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-direita .btn-conta:hover {
+  background-color: var(--cor-botao-login-h, #83C724);
+  transform: translateY(-2px);
+}
+
+.menu-direita span.material-symbols-outlined {
+  font-size: var(--icon-size);
+  color: var(--cor-font-menu, #1e1e1e);
+}
+
+.area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--header-height);
+  padding: 20px;
+}
+
+.gestao {
+  max-width: var(--container-width);
+  width: 100%;
+  padding: var(--container-padding);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gestao:hover {
+  transform: translateY(-5px);
+}
+
+.gestao h2 {
+  color: var(--cor-font-menu, #1e1e1e);
+  font-size: var(--font-size-title);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-form);
+}
+
+button {
+  background-color: var(--cor-botao-login, #358F21);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: var(--button-padding);
+  font-size: var(--font-size-button);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--cor-botao-login-h, #83C724);
+  transform: translateY(-2px);
+}
+
+button[name="tipo"][value="saida"] {
+  background-color: #6c757d;
+}
+
+button[name="tipo"][value="saida"]:hover {
+  background-color: #5a6268;
+}
+
+.mensagem {
+  margin-top: 15px;
+  font-size: 0.95em;
+  color: #28a745;
+  text-align: center;
+}
+
+.mensagem.erro {
+  color: #dc3545;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  :root {
+    --container-width: 100%;
+    --container-padding: 15px;
+    --font-size-title: 1.8em;
+    --font-size-button: 0.95em;
+    --menu-font-size: 0.9em;
+    --icon-size: 20px;
+  }
+
+  nav.menu {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .menu-esquerda {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .menu-direita {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .gestao {
+    padding: var(--container-padding);
+  }
+
+  button {
+    font-size: var(--font-size-button);
+    padding: 8px;
+  }
+}

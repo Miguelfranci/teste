@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmnePoint - Colaboradores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet" />
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="corpo">
+<header>
+    <nav class="menu">
+        <ul class="menu-esquerda">
+            <li><a href="index.php" id="home"><span class="material-symbols-outlined">home</span> Início</a></li>
+            <li><a href="login.php" id="login"><span class="material-symbols-outlined">logout</span> Logout</a></li>
+        </ul>
+        <div class="menu-direita">
+            <span class="material-symbols-outlined">account_circle</span>
+            <button class="btn-conta">Minha Conta</button>
+        </div>
+    </nav>
+</header>
+
+<div class="area">
+    <div class="gestao">
+        <h2>Registro de Ponto</h2>
+        <form method="POST" action="">
+            <input type="hidden" name="id_funcionario" value="<?php echo htmlspecialchars($_SESSION['idFuncionario']); ?>">
+            <button type="submit" name="tipo" value="entrada">Registrar Entrada</button>
+            <button type="submit" name="tipo" value="saida">Registrar Saída</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
